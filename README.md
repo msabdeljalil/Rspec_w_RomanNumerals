@@ -8,15 +8,15 @@ We're going to write a method that converts an integer to its Roman numeral equi
 
 For reference, these are the building blocks for how we encode numbers with Roman numerals:
 
-```text
-I   1
-V   5
-X   10
-L   50
-C   100
-D   500
-M   1000
-```
+| Roman Numeral | Arabic Numeral |
+| ------------- | -------------- |
+| I             | 1              |
+| V             | 5              |
+| X             | 10             |
+| L             | 50             |
+| C             | 100            |
+| D             | 500            |
+| M             | 1000           |
 
 ### Roman Numerals as Representation
 
@@ -32,9 +32,9 @@ Symbols like 5, "five", V, and IIIII are one way. If you asked a three-year-old,
 
 ### Old-school Roman numerals
 
-In the early days of Roman numerals, the Roman's didn't bother with any of this new-fangled subtraction 'IX' nonsense. No sir, it was straight addition, biggest to littlest--so 9 was written 'VIIII' and so on.
+In the early days of Roman numerals, the Roman's didn't bother with any of this new-fangled subtraction 'IX' nonsense. No sir, it was straight addition, biggest to littlest–so 9 was written 'VIIII' and so on.
 
-Write a method `to_roman` that when passed an integer between 1 and 3000 (or so) returns a string containing the proper old-school Roman numeral.
+Write a method `to_roman` that when passed an integer between 1 and 3000 returns a string containing the proper old-school Roman numeral.
 
 In other words, `to_roman(4)` should return the string `'IIII'`.
 
@@ -62,22 +62,21 @@ puts "1646  | MDCXLVI  | #{to_roman(1646)}"
 
 #### Examples
 
-```text
-Arabic      Roman
-     4         IV
-     9         IX
-    14        XIV
-    44       XLIV
-   944     CMXLIV
-```
+| Arabic | Roman  |
+| ------ | ------ |
+| 4      | IV     |
+| 9      | IX     |
+| 14     | XIV    |
+| 44     | XLIV   |
+| 944    | CMXLIV |
 
 ### Roman Numerals vs. Arabic Numerals: Pros and Cons
 
-Reflect for a second on the pros and cons of each representation. Imagine you're an engineer building a system for people to manipulate numbers and you have two proposals before you: use Roman numerals or use the [Arabic numerals](http://en.wikipedia.org/wiki/Arabic_numerals) we use today. How do you decide and why?
+Reflect on the pros and cons of each representation. Imagine you're an engineer building a system for people to manipulate numbers and you have two proposals before you: use Roman numerals or use the [Arabic numerals](http://en.wikipedia.org/wiki/Arabic_numerals) we use today. How do you decide and why?
 
 What benefits do Arabic numerals have over Roman numerals as a way to represent numbers? For example, with Arabic numerals we have an obvious way to represent 0. Arabic numerals also typically require fewer characters to represent the same number, e.g., "3111" vs "MMMCXI".
 
-What else? This is a useful exercise in understanding the relationship between how you represent your data and the actions you want to perform on your data &mdash; a dynamic you'll see at play in almost every piece of software you write.
+What else? This is a useful exercise in understanding the relationship between how you represent your data and the actions you want to perform on your data—a dynamic you'll see at play in almost every piece of software you write.
 
 For example, if we're counting people as they walk into a room by marking something on a piece of paper, Arabic numerals are a terrible representation. That'd be like trying to go for a hike and using a political map as a guide.
 
